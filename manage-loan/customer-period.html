@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -13,7 +13,6 @@
     <link href="assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
-
 </head>
 
 <body>
@@ -40,11 +39,11 @@
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-                    <li class="active-link">
+                    <li>
                         <a href="index.html"><i class="fa fa-desktop"></i>DANH SÁCH KHÁCH HÀNG</a>
                     </li>
 
-                    <li>
+                    <li class="active-link">
                         <a href="customer-period.html"><i class="fa fa-table"></i>DANH SÁCH KHÁCH HÀNG ĐẾN HẠN</a>
                     </li>
 
@@ -68,7 +67,7 @@
                     <div class="col-lg-12" style="text-align: center;">
                         <div class="alert alert-info">
                             <input id="search-customer" type="text" placeholder="Nhập tên khách hàng"
-                                style="width: 55%;" />
+                                style="width: 45%;" />
                             <i class="fa fa-search" aria-hidden="true" style="font-size: 20px; cursor: pointer;"></i>
                         </div>
                         <div class="col-lg-12"
@@ -88,52 +87,26 @@
                 <!-- /. ROW  -->
                 <div class="row text-center pad-top">
                     <div>
-                        <table class="table table-bordered table-striped text-center">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th class="col-lg-6 col-md-6 col-sm-12 text-center">Tên khách hàng</th>
-                                    <th class="col-lg-6 col-md-6 col-sm-12 text-center">Ngày thanh toán</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="col-lg-6 col-md-6 col-sm-12">
-                                        <a href="customer-detail.html">Khách hàng 1</a>
-                                    </td>
-                                    <td class="col-lg-6 col-md-6 col-sm-12">01/04/2025</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-lg-6 col-md-6 col-sm-12">
-                                        <a href="customer-detail.html">Khách hàng 2</a>
-                                    </td>
-                                    <td class="col-lg-6 col-md-6 col-sm-12">02/04/2025</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-lg-6 col-md-6 col-sm-12">
-                                        <a href="customer-detail.html">Khách hàng 3</a>
-                                    </td>
-                                    <td class="col-lg-6 col-md-6 col-sm-12">03/04/2025</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-lg-6 col-md-6 col-sm-12">
-                                        <a href="customer-detail.html">Khách hàng 4</a>
-                                    </td>
-                                    <td class="col-lg-6 col-md-6 col-sm-12">04/04/2025</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-lg-6 col-md-6 col-sm-12">
-                                        <a href="customer-detail.html">Khách hàng 5</a>
-                                    </td>
-                                    <td class="col-lg-6 col-md-6 col-sm-12">05/04/2025</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-lg-6 col-md-6 col-sm-12">
-                                        <a href="customer-detail.html">Khách hàng 6</a>
-                                    </td>
-                                    <td class="col-lg-6 col-md-6 col-sm-12">06/04/2025</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <ul id="customer" style="list-style: none; font-size: 20px;">
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <a href="customer-detail.html" style="color: red;">Khách hàng 1</a>
+                            </li>
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <a href="customer-detail.html" style="color: red;">Khách hàng 2</a>
+                            </li>
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <a href="customer-detail.html" style="color: orange;">Khách hàng 3</a>
+                            </li>
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <a href="customer-detail.html" style="color: orange;">Khách hàng 4</a>
+                            </li>
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <a href="customer-detail.html" style="color: green;">Khách hàng 5</a>
+                            </li>
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <a href="customer-detail.html" style="color: green;">Khách hàng 6</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <!-- /. PAGE INNER  -->
@@ -174,6 +147,10 @@
                     <input type="text" class="customer-name" placeholder="Nhập địa chỉ khách hàng"><br>
                 </div>
                 <div>
+                    <label>Thời gian bắt đầu trả:</label><br>
+                    <input type="date" id="selectedDate" class="customer-name"><br>
+                </div>
+                <div>
                     <label>Cách trả:</label><br>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="time" value="7" checked>
@@ -190,16 +167,19 @@
                 </div>
                 <div>
                     <label>Thời gian trả:</label><br>
-                    <input type="date" id="returnDate" class="customer-name" readonly><br>
+                    <input type="date" id="returnDate" class="customer-name"><br>
+                </div>
+                <div>
+                    <label>Hạn thanh toán:</label><br>
+                    <input type="date" class="customer-name"><br>
                 </div>
                 <div>
                     <label>Tên cửa hàng:</label><br>
-                    <input type="text" class="customer-name" id="storeInput" placeholder="Nhập tên cửa hàng"
-                        readonly><br>
+                    <input type="text" class="customer-name" placeholder="Nhập tên cửa hàng"><br>
                 </div>
                 <div>
                     <label>Loại thiết bị:</label><br>
-                    <input type="text" class="customer-name" id="productInput" placeholder="Nhập tên thiết bị" readonly><br>
+                    <input type="text" class="customer-name" placeholder="Nhập tên thiết bị"><br>
                 </div>
                 <div>
                     <label>Tài khoản ICLOUD:</label><br>
@@ -220,12 +200,12 @@
                 </div>
                 <div>
                     <label>Kỳ hạn vay (tháng):</label><br>
-                    <input type="number" id="term" class="customer-name" placeholder="Nhập kỳ hạn vay"
+                    <input type="number" id="term" class="customer-name" placeholder="Nhập số tiền giải ngân"
                         oninput="calculateLoan()"><br>
                 </div>
                 <div>
                     <label>Lãi (tính theo %):</label><br>
-                    <input type="number" id="interest" class="customer-name" placeholder="Nhập lãi suất"
+                    <input type="number" id="interest" class="customer-name" placeholder="Nhập số tiền giải ngân"
                         oninput="calculateLoan()"><br>
                 </div>
                 <div>
@@ -248,36 +228,6 @@
                     <button class="btn-primary" id="save-customer"
                         style="margin-right: 10px; width: 100px;">Lưu</button>
                     <button class="btn-secondary" id="cancel" style="width: 100px;">Hủy</button>
-                </div>
-            </div>
-        </div>
-        <!-- Modal -->
-        <div id="store-modal" class="modal">
-            <div class="modal-content">
-                <span class="store-close">&times;</span>
-                <div class="modal-header">
-                    <h5 class="modal-title" id="storeModalLabel">Chọn Cửa Hàng</h5>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="searchStore" class="form-control mb-3" placeholder="Tìm kiếm cửa hàng...">
-                    <ul id="storeList" class="list-group">
-                        <!-- Danh sách cửa hàng sẽ được render bằng JavaScript -->
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Modal -->
-        <div id="product-modal" class="modal">
-            <div class="modal-content">
-                <span class="product-close">&times;</span>
-                <div class="modal-header">
-                    <h5 class="modal-title" id="productModalLabel">Chọn Thiết Bị</h5>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="searchProduct" class="form-control mb-3" placeholder="Tìm kiếm thiết bị...">
-                    <ul id="productList" class="list-group">
-                        <!-- Danh sách cửa hàng sẽ được render bằng JavaScript -->
-                    </ul>
                 </div>
             </div>
         </div>
@@ -305,19 +255,9 @@
         document.getElementById("customer-modal").style.display = "flex";
     });
 
-    // Đóng modal thêm customer khi nhấn vào nút đóng
+    // Đóng modal khi nhấn vào nút đóng
     document.querySelector(".close").addEventListener("click", function () {
         document.getElementById("customer-modal").style.display = "none";
-    });
-
-    // Đóng modal thêm customer khi nhấn vào nút đóng
-    document.querySelector(".store-close").addEventListener("click", function () {
-        document.getElementById("store-modal").style.display = "none";
-    });
-
-    // Đóng modal thêm customer khi nhấn vào nút đóng
-    document.querySelector(".product-close").addEventListener("click", function () {
-        document.getElementById("product-modal").style.display = "none";
     });
 
     document.querySelector("#save-customer").addEventListener("click", function () {
@@ -336,7 +276,6 @@
         }
     });
 
-    // Hàm tính toán lãi và gốc
     function calculateLoan() {
         let interestRate = parseFloat(document.getElementById("interest").value) || 0;
         let loanAmount = parseFloat(document.getElementById("amount").value) || 0;
@@ -355,20 +294,24 @@
         document.getElementById("monthAmount").value = loanTerm.toString();
     }
 
-    // Xử lí tính tiền gốc và lãi
     document.addEventListener("DOMContentLoaded", function () {
         const radioButtons = document.querySelectorAll("input[name='time']");
+        const selectedDateInput = document.getElementById("selectedDate");
         const returnDateInput = document.getElementById("returnDate");
 
         function updateReturnDate(daysToAdd) {
-            let today = new Date();
-            today.setDate(today.getDate() + daysToAdd);
-            let formattedDate = today.toISOString().split("T")[0];
+            let selectedDate = selectedDateInput.value ? new Date(selectedDateInput.value) : new Date();
+            selectedDate.setDate(selectedDate.getDate() + daysToAdd);
+            let formattedDate = selectedDate.toISOString().split("T")[0];
             returnDateInput.value = formattedDate;
         }
 
         radioButtons.forEach(radio => {
             radio.addEventListener("change", function () {
+                if (!selectedDateInput.value) {
+                    alert("Vui lòng chọn ngày bắt đầu trước!");
+                    return;
+                }
                 updateReturnDate(parseInt(this.value));
             });
         });
@@ -389,86 +332,6 @@
             if (value) {
                 this.value = parseFloat(value).toLocaleString();
             }
-        });
-    });
-
-    // Xử lí mở và đóng modal cửa hàng
-    document.addEventListener("DOMContentLoaded", function () {
-        const storeInput = document.getElementById("storeInput");
-        const searchInput = document.getElementById("searchStore");
-        const storeList = document.getElementById("storeList");
-        const storeModal = document.getElementById("store-modal");
-
-        // Danh sách cửa hàng mẫu (có thể lấy từ API)
-        const stores = ["Cửa hàng A", "Cửa hàng B", "Cửa hàng C", "Cửa hàng D", "Cửa hàng E"];
-
-        // Hàm render danh sách cửa hàng
-        function renderStoreList(filter = "") {
-            storeList.innerHTML = ""; // Xóa danh sách cũ
-            stores.forEach(store => {
-                if (store.toLowerCase().includes(filter.toLowerCase())) {
-                    const li = document.createElement("li");
-                    li.textContent = store;
-                    li.classList.add("list-group-item", "store-item");
-                    li.addEventListener("click", function () {
-                        storeInput.value = store; // Gán giá trị vào input
-                        storeModal.style.display = "none"; // Đóng modal
-                    });
-                    storeList.appendChild(li);
-                }
-            });
-        }
-
-        // Khi mở modal, hiển thị toàn bộ danh sách cửa hàng
-        storeInput.addEventListener("click", function () {
-            searchInput.value = ""; // Xóa text tìm kiếm
-            renderStoreList(); // Hiển thị toàn bộ danh sách
-            storeModal.style.display = "flex";
-        });
-
-        // Khi nhập vào ô tìm kiếm, lọc danh sách
-        searchInput.addEventListener("input", function () {
-            renderStoreList(this.value);
-        });
-    });
-
-    // Xử lí sự kiện mở và đóng modal chọn product
-    document.addEventListener("DOMContentLoaded", function () {
-        const productInput = document.getElementById("productInput");
-        const searchInput = document.getElementById("searchProduct");
-        const productList = document.getElementById("productList");
-        const productModal = document.getElementById("product-modal");
-
-        // Danh sách cửa hàng mẫu (có thể lấy từ API)
-        const products = ["Iphone 11 Pro Max", "Iphone 12 Pro Max", "Iphone 13 Pro Max", "Iphone 14 Pro Max", "Iphone 15 Pro Max"];
-
-        // Hàm render danh sách cửa hàng
-        function renderStoreList(filter = "") {
-            productList.innerHTML = ""; // Xóa danh sách cũ
-            products.forEach(product => {
-                if (product.toLowerCase().includes(filter.toLowerCase())) {
-                    const li = document.createElement("li");
-                    li.textContent = product;
-                    li.classList.add("list-group-item", "product-item");
-                    li.addEventListener("click", function () {
-                        productInput.value = product; // Gán giá trị vào input
-                        productModal.style.display = "none"; // Đóng modal
-                    });
-                    productList.appendChild(li);
-                }
-            });
-        }
-
-        // Khi mở modal, hiển thị toàn bộ danh sách cửa hàng
-        productInput.addEventListener("click", function () {
-            searchInput.value = ""; // Xóa text tìm kiếm
-            renderStoreList(); // Hiển thị toàn bộ danh sách
-            productModal.style.display = "flex";
-        });
-
-        // Khi nhập vào ô tìm kiếm, lọc danh sách
-        searchInput.addEventListener("input", function () {
-            renderStoreList(this.value);
         });
     });
 </script>
