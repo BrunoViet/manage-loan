@@ -1,0 +1,20 @@
+Ngày Tạo HĐ
+Số cccd
+Sđt
+Tên khách 
+Địa chỉ 
+Cách Trả
+-Tuần
+-Nữa Tháng
+-Tháng
+Thời gian trả
+Hạn Thanh Toán 
+Tên Cửa Hàng
+Loại Thiết Bị
+Tài Khoản Icloud
+Giá Trị Máy
+Giải Ngân
+Lãi 
+Tiền Thanh toán 
+Tiền lãi
+Tiền gốc
